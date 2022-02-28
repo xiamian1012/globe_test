@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<style>
+html,
+body {
+    height:100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    transform-origin:0px 0px 0px;
+    box-sizing: border-box;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+#chart1 {
+top:20px;
+left:10px;
+width: 1900px;
+height:894px;
+z-index: 2;
+}
+
+
+
+
+#background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    z-index: 0;
+}
+
+
+
+</style>
+<script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.1.2/echarts.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/echarts-gl/2.0.7/echarts-gl.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="background">
+    <img src="https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/icon/background4.jpg"/>
+</div>
+
+<div id="app">
+  
+    <div id="chart1" ></div>
+    
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/gh/xiamian1012/echarts@store/js/galaxy_v1.min.js"></script>
+
+        <script type="text/javascript">
+        // 一开始加载就适应屏幕的宽高
+        $(function() {
+            //offsetWidth： 获取body元素对象的宽度，即offsetWidth=width+padding+border availWidth：返回当前屏幕宽度
+            var scale = document.body.clientWidth / 1920;
+            $(document.body).css("zoom", scale);
+        });
+        $(window).resize(function() {
+            var scale = document.body.clientWidth / 1920;
+            $(document.body).css("zoom", scale);
+        });
+
+     </script>
+</html>
